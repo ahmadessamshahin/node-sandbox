@@ -1,0 +1,45 @@
+{
+  "name": "node-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ahmadessamshahin/node-sandbox.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "lint": "eslint src/*",
+    "prettier": "prettier --check src/*",
+    "format": "prettier --write src/*"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.{ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@types/node": "^15.12.0",
+    "commitlint-config-jira": "^1.5.1",
+    "commitlint-plugin-jira-rules": "^1.5.1",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
