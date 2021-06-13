@@ -18,6 +18,8 @@ module.exports = {
     cacheWithContext: false,
     alias: {
       '@utils': path.resolve(__dirname, './src/utils'),
+      '@lib': path.resolve(__dirname, './src/lib'),
+      '@config': path.resolve(__dirname, './src/config'),
       '@src': path.resolve(__dirname, './src')
     }
   },
