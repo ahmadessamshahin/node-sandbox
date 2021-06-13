@@ -1,6 +1,6 @@
 import morgan, { StreamOptions } from 'morgan';
 import { IncomingMessage } from 'http';
-import Logger from '../lib/logger';
+import Logger from './logger';
 
 interface Request extends IncomingMessage {
   body: {
