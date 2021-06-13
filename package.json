@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "build": "webpack",
     "run:dev": "nodemon dist/index.js",
-    "run:prod": "node dist/index.js",
+    "run:prod": "tsc -w & node dist/index.js",
     "lint": "eslint src/*",
     "prettier": "prettier --check src/*",
     "format": "prettier --write src/*"
