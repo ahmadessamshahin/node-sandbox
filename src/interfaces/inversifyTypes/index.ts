@@ -1,7 +1,12 @@
 import { objectMapper } from "@utils/objectMapper";
 
-const types = {
-  User: 'User'
+const repositoriesTypes = {
+  UserRepository: 'UserRepository'
 };
 
-export const TYPES = objectMapper<string, symbol>(types, (value: string) => Symbol.for(value));
+
+const servicesTypes = {
+  UserService: 'UserService'
+};
+
+export const TYPES = objectMapper<string, symbol>({ ...repositoriesTypes, ...servicesTypes}, (value: string) => Symbol.for(value));

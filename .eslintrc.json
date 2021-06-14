@@ -101,6 +101,7 @@
       "alias": {
         "map": [
           ["@interfaces", "./src/interfaces"],
+          ["@api", "./src/api"],
           ["@utils", "./src/utils"],
           ["@lib", "./src/lib"],
           ["@config", "./src/config"],

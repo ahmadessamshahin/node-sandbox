@@ -15,6 +15,7 @@ module.exports = {
     cacheWithContext: false,
     alias: {
       '@interfaces': path.resolve(__dirname, './src/interfaces'),
+      '@api': path.resolve(__dirname, './src/api'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@lib': path.resolve(__dirname, './src/lib'),
       '@config': path.resolve(__dirname, './src/config'),
