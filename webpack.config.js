@@ -1,5 +1,3 @@
-/* eslint-disable import/no-self-import */
-/* eslint-disable import/no-unresolved */
 const nodeExternals = require('webpack-node-externals');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const path = require('path');
@@ -11,9 +9,8 @@ module.exports = {
   devtool:
     process.env.NODE_ENV === 'production' ? 'source-map' : 'eval-source-map',
   resolve: {
-    root: path.resolve(__dirname),
     modules: ['node_modules'],
-    extensions: ['.mjs', '.json', '.ts', '.js', ''],
+    extensions: ['.mjs', '.json', '.ts', '.js'],
     symlinks: false,
     cacheWithContext: false,
     alias: {
@@ -23,10 +20,14 @@ module.exports = {
       '@src': path.resolve(__dirname, './src')
     }
   },
+  watchOptions: {
+    poll: true,
+    ignored: '/node_modules/'
+  },
   output: {
-    libraryTarget: 'commonjs',
-    path: path.join(__dirname, '.webpack'),
-    filename: '[name].js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    publicPath: '/dist/'
   },
   target: 'node',
   externals: [nodeExternals()],

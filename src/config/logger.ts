@@ -1,5 +1,5 @@
 import winston from 'winston';
-import env from './secrets';
+import env from '@config/secrets';
 
 const levels = {
   error: 0,

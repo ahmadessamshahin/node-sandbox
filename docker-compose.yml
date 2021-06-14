@@ -5,7 +5,6 @@ services:
       args:
       - NODE_ENV=development
       context: .
-    command: ./entrypoint.sh
     env_file:
       - ./.env
     ports:
