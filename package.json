@@ -1,0 +1,66 @@
+{
+  "name": "node-sandbox",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "repository": "https://github.com/ahmadessamshahin/node-sandbox.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "webpack --watch --mode development",
+    "build:prod": "webpack --mode production",
+    "run:dev": "nodemon",
+    "run:prod": "node dist/main.js",
+    "start:dev": "yarn build:dev & yarn run:dev",
+    "start:prod": "yarn build:prod & yarn run:prod",
+    "lint": "eslint src/*",
+    "prettier": "prettier --check src/*",
+    "format": "prettier --write src/*"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.{ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@types/i18n": "^0.13.0",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^15.12.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "commitlint-config-jira": "^1.5.1",
+    "commitlint-plugin-jira-rules": "^1.5.1",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.2.10",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "typescript-eslint": "^0.0.1-alpha.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "class-validator": "^0.13.1",
+    "dotenv": "^10.0.0",
+    "i18n": "^0.13.3",
+    "inversify": "^5.1.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3"
+  }
+}
