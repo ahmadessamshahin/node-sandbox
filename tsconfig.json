@@ -23,6 +23,7 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
+      "@interfaces/*": ["src/interfaces/*"],
       "@utils/*": ["src/utils/*"],
       "@lib/*": ["src/lib/*"],
       "@config/*": ["src/config/*"],

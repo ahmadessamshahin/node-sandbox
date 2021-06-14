@@ -100,6 +100,7 @@
     "import/resolver": {
       "alias": {
         "map": [
+          ["@interfaces", "./src/interfaces"],
           ["@utils", "./src/utils"],
           ["@lib", "./src/lib"],
           ["@config", "./src/config"],

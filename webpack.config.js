@@ -14,6 +14,7 @@ module.exports = {
     symlinks: false,
     cacheWithContext: false,
     alias: {
+      '@interfaces': path.resolve(__dirname, './src/interfaces'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@lib': path.resolve(__dirname, './src/lib'),
       '@config': path.resolve(__dirname, './src/config'),

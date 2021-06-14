@@ -1,12 +1,10 @@
-/* eslint-disable no-console */
-/* eslint-disable import/no-unresolved */
 const http = require('http');
 
 const options = {
   timeout: 2000,
   host: 'localhost',
   port: process.env.PORT || 3000,
-  path: '/healthz' // must be the same as HEALTHCHECK in Dockerfile
+  path: '/healthz'
 };
 
 const request = http.request(options, (res) => {
