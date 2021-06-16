@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { InversifyExpressServer } from "inversify-express-utils";
 import container from "./inversify.config";
 import "@api/controllers/index"
