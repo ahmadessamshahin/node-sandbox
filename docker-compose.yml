@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  backend:
+    build:
+      args:
+      - NODE_ENV=development
+      context: .
+    env_file:
+      - ./.env
+    ports:
+      - 3000:3000
+    volumes:
+      # Source code is read onnly
+      - ./src:/code/src:ro
+      - ./package.json:/code/package.json
+      - ./yarn.lock:/code/yarn.lock
